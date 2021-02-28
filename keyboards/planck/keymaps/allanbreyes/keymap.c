@@ -40,11 +40,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // Adjust
 [3] = LAYOUT_ortho_4x12(
-    KC_NO, RESET, DEBUG, RGB_TOG, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_PSCR,
+    MO(4), DM_REC1, KC_NO, RGB_TOG, RESET, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, DM_PLY1, MO(4),
     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, KC_NO,
-    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+    KC_NO, KC_NO, KC_NO, MU_ON, MU_OFF, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, DM_RSTP,
     KC_TRNS, KC_TRNS, AG_SWAP, AG_NORM, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
-)
+),
+
+// Reset
+[4] = LAYOUT_ortho_4x12(
+    RESET, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, RESET,
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
+),
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
